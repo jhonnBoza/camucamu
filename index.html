@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMU VIVO — Lo natural en cada cucharada</title>
+  <meta name="description" content="Mermelada de camu camu endulzada con stevia, sin azúcar añadida." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <script src="https://unpkg.com/lucide@0.469.0"></script>
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar" id="header">
+    <nav class="topbar-inner" id="topbar-inner">
+      <div class="nav-pills">
+        <a href="#producto">Producto</a>
+        <a href="#por-que">Descubre</a>
+        <a href="#disfrutalo">Disfrútalo</a>
+      </div>
+      <div class="nav-logo-slot" id="nav-logo-slot" aria-hidden="true">
+        <span>CAMU VIVO</span>
+      </div>
+      <div class="nav-actions">
+        <a class="pill" href="#contacto">Contáctanos</a>
+        <button class="pill pill-dark cart-btn" type="button" data-cart-open aria-label="Carrito">
+          <i data-lucide="shopping-cart"></i>
+          <span data-cart-count>0</span>
+        </button>
+        <button class="menu-btn" type="button" data-menu-toggle aria-label="Menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-nav" data-mobile-nav hidden>
+      <a href="#producto">Producto</a>
+      <a href="#por-que">Descubre</a>
+      <a href="#camu-camu">El camu camu</a>
+      <a href="#disfrutalo">Disfrútalo</a>
+      <a href="#contacto">Contáctanos</a>
+    </div>
+  </header>
+
+  <!-- Solo el título sube al navbar -->
+  <div class="brand-fly" id="brand-fly" aria-hidden="true">CAMU VIVO</div>
+
+  <main>
+    <!-- HERO pin: se queda fijo hasta que el título llega al navbar -->
+    <section class="hero" id="inicio">
+      <div class="hero-pin">
+        <div class="hero-bg">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="assets/hero-poster.png"
+          >
+            <source src="assets/hero.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-veil"></div>
+        </div>
+
+        <div class="hero-stage" id="hero-stage">
+          <div class="jar-glow" aria-hidden="true"></div>
+          <div class="hero-product" id="hero-product">
+            <img src="assets/frasco-clean.png" alt="Frasco CAMU VIVO 240 g" class="jar" />
+          </div>
+
+          <!-- Aparece cuando el título ya está en el navbar -->
+          <div class="hero-glass" id="hero-glass" aria-hidden="true">
+            <div class="glass-cards" aria-hidden="true">
+              <article class="glass-card glass-card--tl" data-card="0">
+                <span class="glass-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-2.8 3.4-6 6.7-6 10a6 6 0 0 0 12 0c0-3.3-3.2-6.6-6-10Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 14.5c.6 1.4 1.8 2 2.5 2s1.9-.6 2.5-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span>Sin azúcar añadida</span>
+              </article>
+              <article class="glass-card glass-card--tr" data-card="1">
+                <span class="glass-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z" stroke="currentColor" stroke-width="1.6"/></svg>
+                </span>
+                <span>Rica en Vitamina C</span>
+              </article>
+              <article class="glass-card glass-card--bl" data-card="2">
+                <span class="glass-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 20V9l5-5 5 5v11" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span>Endulzada con Stevia</span>
+              </article>
+              <article class="glass-card glass-card--br" data-card="3">
+                <span class="glass-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="4" width="12" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span>240g de pura fruta</span>
+              </article>
+            </div>
+
+            <p class="hero-tagline" data-tagline>100% Natural · Superfruto Amazónico</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTO -->
+    <section class="section product" id="producto">
+      <div class="container">
+        <div class="section-top reveal">
+          <p class="eyebrow dark">Nuestro producto</p>
+          <h2>Una receta que <em>habla por sí sola</em></h2>
+        </div>
+
+        <div class="product-panel glass-panel reveal">
+          <div class="product-visual">
+            <div class="product-glow" aria-hidden="true"></div>
+            <img src="assets/frasco-clean.png" alt="Mermelada CAMU VIVO" class="jar-lg" />
+            <div class="product-chips">
+              <span class="chip-glass">240 g</span>
+              <span class="chip-glass">Stevia</span>
+              <span class="chip-glass">Sin azúcar</span>
+            </div>
+          </div>
+          <div class="product-copy">
+            <p class="kicker">Presentación 240 g</p>
+            <h3>Mermelada de <em>camu camu</em></h3>
+            <p>
+              Elaborada a base de camu camu, endulzada con stevia y sin azúcar añadida.
+              Textura espesa y color rojo borgoña intenso.
+            </p>
+            <ul class="feature-list">
+              <li>Elaborada a base de camu camu</li>
+              <li>Endulzada con stevia</li>
+              <li>Sin azúcar añadida</li>
+              <li>Ideal para tostadas, panes y desayunos</li>
+            </ul>
+            <div class="buy-box glass-panel">
+              <div>
+                <span>Precio de venta</span>
+                <strong>S/ 13.90</strong>
+              </div>
+              <div class="qty">
+                <button type="button" data-qty-minus>−</button>
+                <input type="number" min="1" max="20" value="1" data-qty-input aria-label="Unidades" />
+                <button type="button" data-qty-plus>+</button>
+              </div>
+            </div>
+            <div class="buy-actions">
+              <button class="btn btn-accent" type="button" data-add-cart>Agregar al carrito →</button>
+              <a class="btn btn-glass" href="https://wa.me/51923801883?text=Hola%20CAMU%20VIVO" target="_blank" rel="noopener noreferrer">Me interesa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ -->
+    <section class="section why" id="por-que">
+      <div class="container">
+        <div class="section-top reveal">
+          <p class="eyebrow dark">¿Por qué CAMU VIVO?</p>
+          <h2>Pequeños detalles. <em>Gran sabor.</em></h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-item glass-panel reveal">
+            <span class="why-num">01</span>
+            <h3>Ingredientes naturales</h3>
+            <p>Camu camu como protagonista de una receta pensada con sencillez.</p>
+          </article>
+          <article class="why-item glass-panel reveal" style="--d:.06s">
+            <span class="why-num">02</span>
+            <h3>Endulzada con stevia</h3>
+            <p>Una alternativa diferente para disfrutar el dulzor que te gusta.</p>
+          </article>
+          <article class="why-item glass-panel reveal" style="--d:.12s">
+            <span class="why-num">03</span>
+            <h3>Sabor de camu camu</h3>
+            <p>El carácter frutal del camu camu en una textura espesa y brillante.</p>
+          </article>
+          <article class="why-item glass-panel reveal" style="--d:.18s">
+            <span class="why-num">04</span>
+            <h3>Para tus desayunos</h3>
+            <p>Una alternativa para complementar tostadas, panes y meriendas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMU CAMU -->
+    <section class="section story" id="camu-camu">
+      <div class="story-media">
+        <img src="assets/camu-manos.png" alt="Manos con camu camu fresco" />
+      </div>
+      <div class="story-copy reveal">
+        <p class="eyebrow">Descubre el camu camu</p>
+        <h2>El alma frutal de <em>CAMU VIVO</em></h2>
+        <p>
+          El camu camu es el ingrediente protagonista de nuestra propuesta.
+          Buscamos ofrecer una manera diferente y deliciosa de disfrutar esta fruta en tus desayunos.
+        </p>
+        <a class="btn btn-light" href="#disfrutalo">Ver formas de disfrutarlo →</a>
+      </div>
+    </section>
+
+    <!-- DISFRÚTALO: una imagen a la vez con scroll -->
+    <section class="enjoy-scroll" id="disfrutalo" data-enjoy-scroll>
+      <div class="enjoy-sticky">
+        <div class="container enjoy-head">
+          <p class="eyebrow dark">Formas de disfrutarlo</p>
+          <h2>Hazlo tuyo, hazlo <em>delicioso</em></h2>
+          <p class="enjoy-hint">Sigue bajando para ver cada forma</p>
+        </div>
+        <div class="enjoy-stage container">
+          <figure class="enjoy-slide is-on" data-enjoy-slide>
+            <img src="assets/tostadas.png" alt="Tostadas con CAMU VIVO" />
+            <figcaption class="glass-panel"><span>01</span> Sobre tostadas</figcaption>
+          </figure>
+          <figure class="enjoy-slide" data-enjoy-slide>
+            <img src="assets/pan.png" alt="Pan con CAMU VIVO" />
+            <figcaption class="glass-panel"><span>02</span> Con pan fresco</figcaption>
+          </figure>
+          <figure class="enjoy-slide" data-enjoy-slide>
+            <img src="assets/desayuno.png" alt="Frutas con CAMU VIVO" />
+            <figcaption class="glass-panel"><span>03</span> Con frutas</figcaption>
+          </figure>
+        </div>
+        <div class="enjoy-progress" aria-hidden="true">
+          <span data-enjoy-bar></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE -->
+    <section class="section value" id="propuesta">
+      <div class="container value-wrap reveal">
+        <p class="eyebrow">Nuestra propuesta</p>
+        <h2>Más que una mermelada, una nueva forma de disfrutar lo natural</h2>
+        <p>
+          CAMU VIVO combina el sabor del camu camu con el dulzor de la stevia,
+          una alternativa diferente para quienes buscan productos naturales en su día a día.
+        </p>
+        <button class="btn btn-accent" type="button" data-add-cart data-qty="1">Agregar al carrito →</button>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-wrap">
+        <div class="contact-main glass-panel reveal">
+          <p class="eyebrow dark">Contáctanos</p>
+          <h2>¡Queremos que conozcas <em>CAMU VIVO</em>!</h2>
+          <p>Descubre nuestra propuesta y disfruta lo natural en cada cucharada.</p>
+          <div class="contact-cta">
+            <a class="btn btn-dark" href="#producto">Ver producto →</a>
+            <a class="btn btn-wa" href="https://wa.me/51923801883" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="message-circle"></i> WhatsApp · 923 801 883
+            </a>
+          </div>
+        </div>
+        <div class="social-stack reveal" style="--d:.1s">
+          <a class="social-link glass-panel" href="https://www.instagram.com/camu_vivo/" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="instagram"></i>
+            <span>Instagram</span>
+            <strong>@camu_vivo</strong>
+          </a>
+          <a class="social-link glass-panel" href="https://www.tiktok.com/@camu.vivo" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="music-2"></i>
+            <span>TikTok</span>
+            <strong>@camu.vivo</strong>
+          </a>
+          <a class="social-link glass-panel" href="https://wa.me/51923801883" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="phone"></i>
+            <span>WhatsApp</span>
+            <strong>923 801 883</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong class="footer-logo">CAMU VIVO</strong>
+        <p>Lo natural en cada cucharada.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="#producto">Producto</a>
+        <a href="#por-que">Descubre</a>
+        <a href="#disfrutalo">Disfrútalo</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/camu_vivo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i data-lucide="instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@camu.vivo" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i data-lucide="music-2"></i>
+          </a>
+          <a href="https://wa.me/51923801883" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i data-lucide="message-circle"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year></span> CAMU VIVO. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" data-cart-overlay hidden></div>
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+    <div class="cart-head">
+      <h2>Tu carrito <span data-cart-units>0 frascos</span></h2>
+      <button type="button" data-cart-close aria-label="Cerrar">×</button>
+    </div>
+    <div class="cart-body">
+      <div class="cart-empty" data-cart-empty>
+        <img src="assets/frasco-clean.png" alt="" />
+        <h3>Vacío por ahora</h3>
+        <p>Agrega frascos de CAMU VIVO.</p>
+        <button class="btn btn-dark" type="button" data-cart-close data-scroll-product>Ver producto</button>
+      </div>
+      <div class="cart-item" data-cart-item hidden>
+        <img src="assets/frasco-clean.png" alt="" />
+        <div>
+          <h3>Mermelada de camu camu</h3>
+          <p>240 g · S/ 13.90</p>
+          <div class="qty compact">
+            <button type="button" data-cart-minus>−</button>
+            <span data-cart-qty>1</span>
+            <button type="button" data-cart-plus>+</button>
+          </div>
+        </div>
+        <button type="button" class="remove" data-cart-remove>Eliminar</button>
+      </div>
+    </div>
+    <div class="cart-foot" data-cart-foot hidden>
+      <div class="total"><span>Total</span><strong data-cart-total>S/ 0.00</strong></div>
+      <a class="btn btn-accent btn-block" data-whatsapp-order href="#" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp →</a>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
