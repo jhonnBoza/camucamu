@@ -44,6 +44,7 @@ em { font-style: italic; color: var(--burgundy); }
   pointer-events: none;
 }
 .topbar-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,6 +95,10 @@ em { font-style: italic; color: var(--burgundy); }
 }
 .topbar.is-visible .nav-pills a:hover { background: rgba(255,255,255,.1); }
 .nav-logo-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   min-width: 110px;
   height: 28px;
   display: grid;
